@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <meta charset="utf-8">
+  </title class="text">
+  </title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+<!-- Not working as Intended
+
+<header class="menudesk">
+  <nav class="menuNav">
+    <ul class="menulinks">
+      <div class="" style ="display:flex">
+        <a href="/">
+          <li data-placement="right" title="Dashboard" class="menuItemDash">
+            <i class="homepage" aria-hidden="true">
+            -->
+            <!--
+              H add hyperlink to ::before
+
+            </i>
+          </li>
+        </a>
+        <a href="/pedidos">
+          <li data-placement="right" title="Pedidos">
+            <i class="pagepedidos" aria-hidden="true">
+                P  (add hyperlink to ::before)
+            </i>
+          </li>
+        </a>
+        <a href="/NovosPedidos">
+          <li data-placement="right" title="Novos pedidos">
+            <i class="novospedidospage" aria-hidden="true">
+                NP (add hyperlink to ::before)
+            </i>
+          </li>
+        </a>
+        <a href="/Etiquetas">
+          <li data-placement="right" title="Etiquetas">
+            <i class="etiquetaspage" aria-hidden="true">
+                T (add hyperlink to ::before)
+            </i>
+          </li>
+        </a>
+
+        <button type="button" class="buttonmenu">
+          <li data-placement="right" class="logoutItem" title="Logout">
+            <i class="powerOff" aria-hidden="true">
+                LO (add hyperlink to ::before)
+            </i>
+          </li>
+        </button>
+
+        <button type="button" class="buttonsenha">
+          <li data-placement="right"   class="passwordItem" title="Alterar Senha">
+            <i class="fas fa-lock" aria-hidden="true">
+                PS (add hyperlink to ::before)
+            </i>
+          </li>
+        </button>
+
+      </div>
+    </ul>
+  </nav>
+</header>
+-->
+
+  <section class="headersec">
+    <div class="co2">
+      <img src="images/nwayLogo.png" alt="">
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <div class="start">
+    <div class="name-title">
+      <p class="starting"> Olá,
+        <br>
+        <b>Drogaria São Paulo</b>
+      </p>
+    </div>
+    <!--area Selecionar Loja-->
+    <div class="">
+      <div class="selectStore">
+        Selecione a loja
+
+        <!--decorar a box Lojas-->
+        <select name="loja" id="idSelect_store" class="select" onchange="listarPedidos();">
+          <option color: #d2af3f; value="0">Todas as lojas</option>
+        </select>
+
+      </div>
+    </div>
+  </div>
+  <!--area Pedidos-->
+  <div class="areaPedidos">
+    <div class="setorPedidos">
+      <h2>Pedidos</h2>
+      <div id="pedidos">
+        <a class="xls" class="linklogo" href="" javascript:void(0)"">
+          <img src="C:\Users\megas\Desktop\Web Development\teste\images\xlslogo.png" alt="xls icon">
+        </a>
+        <a class="pdf" class="linklogo" href="" javascript:void(0)"">
+          <img src="images/pdflogo.png" alt="pdf icon">
+        </a>
+      </div>
+
+      <div class="inicioData" class="dataColors">
+        <label for="">Início</label>
+        <input type="text" id="dataInicio" name="" value="" maxlength="10">
+        <!--Decorar caixa - inserir aqui-->
+      </div>
+
+
+      <div class="fimData" class="dataColors">
+        <label for="">Fim </label>
+        <input type="text" id="dataFim" name="" value="" maxlength="10">
+        <!--Decorar caixa - inserir aqui-->
+      </div>
+
+      <div class="filtroBusca">
+        <label for="">
+          <input type="search" class="filtroBarra" value="Buscar">
+          <img src="images/searchlogo.png" alt="" class = "searchLogo" >
+        </label>
+
+      </div>
+
+
+      <div class="btn-filtrar ">
+        <input type="button" name="enviar" value="OK" onclick="listarPedidos()" class="btn-grafi">
+      </div>
+
+      <div class="filtroParte">
+        Filtrar
+      </div>
+<br>
+<!--table-->
+      <div class="">
+        <table id="datatable" class="table table-borderless no-footer dataTable" style="width: 100%;" role="grid" border style="groove">
+          <thead class="toptable">
+            <tr id = "Table header section">
+              <th class="TabIndex" rowspan="1" colspan="1">Locker</th>
+              <th class="TabIndex" rowspan="1" colspan="1">Cliente</th>
+              <th class="TabIndex" rowspan="1" colspan="1">Número do pedido</th>
+              <th class="TabIndex" rowspan="1" colspan="1">Telefone</th>
+              <th class="TabIndex" rowspan="1" colspan="1">Data de criação</th>
+              <th class="TabIndex" rowspan="1" colspan="1">Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!--Table data rows-->
+                        <tr id = tableDataRow1 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td class = "datarowData">Maria</td>
+                          <td class = "datarowData">7639142</td>
+                          <td class = "datarowData">11 98452 4412</td>
+                          <td class = "datarowData">24/11/2020</td>
+                          <td class = "datarowData">Retirado</td>
+                        </tr>
+
+                        <tr id = tableDataRow2 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Renato</td>
+                          <td>7639143</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Retirado</td>
+                        </tr>
+
+                        <tr id = tableDataRow3 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Emerson</td>
+                          <td>7639144</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Depositado</td>
+                        </tr>
+
+                        <tr id = tableDataRow4 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Esdras</td>
+                          <td>7639145</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Atrasado</td>
+                        </tr>
+
+                        <tr id = tableDataRow5 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>William</td>
+                          <td>7639146</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Depositado</td>
+                        </tr>
+
+                        <tr id = tableDataRow6 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Julio</td>
+                          <td>7639148</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Depositado</td>
+                        </tr>
+
+                        <tr id = tableDataRow7 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Diego</td>
+                          <td>7639149</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Depositado</td>
+                        </tr>
+
+                        <tr id = tableDataRow8 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Gustavo</td>
+                          <td>7639150</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Depositado</td>
+                        </tr>
+
+                        <tr id = tableDataRow9 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Julio</td>
+                          <td>7639151</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Depositado</td>
+                        </tr>
+
+                        <tr id = tableDataRow10 class = "datarowData">
+                          <td class = "datarowData">Shop Tiete</td>
+                          <td>Diego</td>
+                          <td>7639153</td>
+                          <td>11 98452 4412</td>
+                          <td>24/11/2020</td>
+                          <td>Retirado</td>
+                        </tr>
+
+          </tbody>
+
+<!--How to make buttons work? // JScript + Bootstrap-->
+
+
+        </table>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  </div>
+
+
+
+</body>
+
+</html>
